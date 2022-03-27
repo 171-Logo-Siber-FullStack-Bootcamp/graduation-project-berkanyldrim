@@ -1,0 +1,80 @@
+.slider-product{
+	display: inline-block;
+	width: 100%;
+	margin: 20px 0px;
+	&.featured-product{
+		margin:0 -12px;
+	}
+	.tabs{
+		display: inline-block;
+		width: 100%;
+		text-align: center;
+		li{
+			display: inline-block;
+			cursor: pointer;
+			font-size: 13px;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: #888;
+			margin-bottom: 20px;
+			padding: 0 15px;
+			padding-top: 65px;
+			background: url(../images/Futurelife-icon-megamenu.png)no-repeat scroll center 0;margin: 0 20px 20px 20px;
+			&:hover,&.active{
+				color: $brand-primary;
+				background-image:url(../images/Futurelife-icon-megamenu-hover2.png);
+			}
+		}
+		li:nth-child(2){background-position: center -97px;}
+		li:nth-child(3){background-position: center -198px;}
+		li:nth-child(4){background-position: center -305px;}
+		li:nth-child(5){background-position: center -412px;}
+	}
+}
+.tab-container{
+	.owl-carousel {
+		.owl-item{
+			padding: 0 4px;
+		}
+	}
+	.owl-stage-outer{
+		padding: 20px 0px;
+	}
+}
+// Home Version 2
+.title-text{
+	ul.tabs{
+		float: right;
+		display: inline-block;
+		li{
+			display: inline-block;
+			cursor: pointer;
+			margin: 0 10px;
+			text-transform: uppercase;
+			font-weight: 700;
+			color: $gray;
+			padding-bottom: 5px;
+			&:last-child{
+				margin-right: 0px;
+			}
+			&.active{
+				color: $brand-primary;
+				border-bottom: 3px solid $brand-primary;
+			}
+		}
+	}
+}
+.ver1{
+	.our-new-product{
+		.product-tab-content{
+			margin:0px -12px;
+		}
+	}
+}
+@include maxDesktop{
+	.slider-product{
+		&.our-new-product{
+			margin: 0 -12px;
+		}
+	}
+}

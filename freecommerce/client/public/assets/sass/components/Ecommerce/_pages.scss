@@ -1,0 +1,50 @@
+// Grid Side Bar
+#secondary{
+	&.col-md-3{
+		padding-left: 0px;
+		padding-right: 30px;
+	}
+}
+#primary{
+	&.col-md-9{
+		padding: 0px;
+	}
+	.products{
+		margin: 0 -10px;
+	}
+}
+@include maxDesktop{
+	.products{
+		&.grid_full,&.grid_full.grid_sidebar{
+			.item-inner{
+				width: 33.33%;
+			}
+		}
+	}
+}
+
+@include maxtable{
+	.products{
+		&.grid_full,&.grid_full.grid_sidebar{
+			.item-inner{
+				width: 50%;
+			}
+		}
+	}
+}
+
+@include maxmobile{
+	.products{
+		&.grid_full,&.grid_full.grid_sidebar{
+			.item-inner{
+				width: 100%;
+			}
+		}
+	}
+	.ordering{
+		.order-by{
+			margin-top: 20px;
+			margin-left: 0px !important;;
+		}
+	}
+}

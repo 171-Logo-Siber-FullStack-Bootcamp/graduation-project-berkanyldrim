@@ -1,0 +1,264 @@
+.checkout-header{
+	ul{
+		padding: 10px 0px 20px;
+		display: inline-block;
+		width: 100%;
+		margin-bottom: 50px;
+		border-bottom: 1px solid #e5e5e5;
+		li{
+			display: inline-block;
+			width: 33.33%;
+			float: left;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: $gray;
+			font-size: 15px;
+			&:nth-child(2){
+				text-align: center;
+			}
+			&:nth-child(3){
+				text-align: right;
+			}
+			&.active{
+				span{
+					background: $brand-primary;
+					color: #fff;					
+				}
+			}
+			span{
+				display: inline-block;
+				margin-right: 10px;
+				padding:10px;
+				border-radius: 50%;
+				background: #e5e5e5;
+				color: $gray-dark;
+				@include size(40px,40px);
+			}
+		}
+	}
+}
+.account{
+	.col-md-6{
+		&:nth-child(2n+1){
+			padding-left: 0px;
+		}
+		&:nth-child(2n){
+			padding-right{
+				padding-right: 0px;
+			}
+		}
+	}
+	p{
+		font-family: "Lora";
+		font-style: italic;
+		color: $gray-light;
+	}
+}
+.check-out{
+	label{
+		font-family: "Montserrat" !important;
+		color: $gray !important;
+		font-weight: 700 !important;
+		font-style: normal;
+		text-transform: capitalize;
+		font-size: 15px !important;
+	}
+}
+.cart-review{
+	display:inline-block;
+	width: 100%;
+	table.table{
+		th{
+			&:nth-child(2){
+				width: 30%;
+			}
+			&:nth-child(3){
+				width: 15%;
+			}
+		}
+		td{
+			&:nth-child(2){
+				color: $gray-light;
+			}
+			&:nth-child(3),&:nth-child(5){
+				color: $gray;
+				font-style: normal;
+				font-weight:700;
+				font-size: 18px;
+				font-family: "Montserrat";
+			}
+		}
+	}
+}
+.icon{
+	width:100%;
+	text-align:center;
+	.fa-shopping-basket{
+		font-size: 300px;
+		color: #ddd;
+		position: relative;
+	}
+	.fa-check{
+		position: absolute;
+		right: -33px;
+		bottom: -50px;
+		font-size: 160px;
+		color: #e11111;
+	}
+	h3,h4{
+		text-transform: uppercase;
+		color: $gray;
+		text-align: center;
+		font-weight: 700;
+	}
+	h3{
+		font-size: 30px;
+		margin-top: 80px;
+	}
+	h4{
+		font-size: 18px;
+		margin: 10px 0px;
+	}
+}
+.order-details{
+	.col-md-6{
+		&:nth-of-type(2n+1){
+			padding-right:0px;
+		}
+		&:nth-of-type(2n){
+			padding-left:0px;
+		}
+		h4{
+			font-size: 15px;
+			color: $gray;
+			line-height: 20px;
+			text-transform: capitalize;
+			font-weight: 700;
+			margin-bottom: 15px;
+		}
+		p{
+			font-family: "Lora";
+			font-style: italic;
+			color: $gray-light;
+			margin: 4px 0px;
+			line-height: 20px;
+			b{
+				color: #222;
+			}
+			&.total{
+				text-transform: uppercase;
+				color: $brand-primary;
+				font-style: normal;;
+				font-weight: 700;
+				margin-top: 30px;
+				span{
+					color: $gray;
+				}
+			}
+		}
+	}
+}
+.payment-order{
+	ul.tabs{
+		li{
+			padding: 20px 0px 20px 20px;
+			position: relative;
+			border-bottom:1px solid $gray-lighter;
+			h3{
+				font-size: 15px;
+				color: $gray;
+				margin-bottom: 5px;
+				display: inline-block;
+			}
+			p{
+				font-family:"Lora";
+				font-style: italic;
+				color: $gray-light;
+			}
+			i{
+				@include size(12px,12px);
+				content: "";
+				border-radius: 50%;
+				border:1px solid $gray-light;
+				position: absolute;
+				left: 0px;
+				top: 22px;
+				background:#fff;
+			}
+			&.active{
+				i{
+					border: 1px solid $brand-primary;
+					background: $brand-primary;
+				}
+			}
+			img{
+				float: right;
+			}
+		}
+	}
+}
+.form-group{
+	margin-bottom:25px !important;
+}
+
+@include maxDesktop{
+	.account{
+		.col-md-6{
+			padding: 0px !important;
+		}
+	}
+	.order-details{
+		.col-md-6{
+			padding: 0px !important;
+		}
+	}
+}
+@include maxtable{
+	.check-confirm{
+		.col-md-6{
+			padding: 0px !important;
+			&.order-details{
+				margin-top: 40px;
+			}
+			.icon{
+				h3{
+					font-size: 20px;
+				}
+				h4{
+					font-size: 15px;
+				}
+			}
+		}
+		.col-md-12{
+			padding: 0px !important;
+		}
+		.return-home a:first-child{
+			margin-right: 10px;
+		}
+	}
+	.check-billing{
+		.contact-form{
+			.col-md-6{
+				padding: 0px !important;
+			}
+		}
+	}
+	.acc-login .form-group .btn.acc:nth-child(2n+1){
+		width: 100%;
+	}
+	.account .col-md-6.acc-login{
+		margin-top: 50px;
+	}
+}
+@include maxmobile{
+	.checkout-header ul{
+		li{
+			width: 100%;
+			text-align: left !important;
+			margin-bottom: 20px;
+		}
+	}
+	.icon .fa-shopping-basket{
+		font-size: 220px;
+	}
+}

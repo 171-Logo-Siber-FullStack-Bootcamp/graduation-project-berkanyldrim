@@ -1,0 +1,165 @@
+.banner-center{
+	display: inline-block;width: 100%;margin: 20px 0 90px;
+	.banner-item{
+		background: #eee;
+		height: 415px;
+		display: inline-block;
+		width: 100%;
+		text-align: center;
+		padding: 0 20px;
+		position: relative;
+		a{
+			font-weight: 700;
+			text-transform: uppercase;
+			font-size: 12px;
+			color: #666;
+			display: inline-block;
+			padding: 7px 20px;border: 1px solid #ccc;
+			border-radius: 10px;
+			margin-top: 30px;
+			line-height: 20px;			
+			&:hover{
+				background-color: $brand-primary;
+				color: #fff;
+				border: 1px solid $brand-primary;
+			}
+		}
+	}
+	p{
+		font-family: "Lora";
+		font-style: italic;
+		color: #999;
+		line-height: 18px;
+	}
+	.col-md-6{
+		.text{
+			position: absolute;
+			width: 40%;
+			left: 60%;
+			top: 20%;
+			padding-right: 20px;
+			text-align: left;
+		}
+		h3{
+			font-family: "Lora";
+			font-style: italic;
+			color: #666;
+			line-height: 14px;
+		}
+		h2{
+			font-size: 30px;font-weight: 700;color: #e19824;text-transform: uppercase;line-height: 30px;margin: 5px 0px;margin-bottom: 50px;display: inline-block;width: 100%;position: relative;
+			&:after{
+				position: absolute;
+				content: "";
+				left: 0px;
+				width: 35px;
+				height: 2px;
+				background-color: #ccc;
+				bottom: -25px;
+			}
+		}	
+		.images	{
+			position: absolute;
+			left: 0px;
+			bottom: -23px;
+		}
+	}
+	.col-md-3{
+		&.first{
+			padding-left: 0px;
+			.banner-item{
+				background-color: #f4f4f4;
+			}
+			h2{
+				font-size: 20px;
+				font-weight: 700;
+				line-height: 22px;
+				color: #618284;
+				text-transform: uppercase;
+				margin: 40px 0 20px 0;
+			}
+			.images{
+				position: absolute;
+				left: 0px;
+				bottom: -23px;
+				width: 100%;
+				img{
+					width: auto;
+				}
+			}
+		}
+		&.last{
+			padding-right: 0px;
+			.images{
+				position: absolute;
+				top: 35px;
+				left: 0px;
+			}
+			img{
+				max-width: 100%;
+			}
+			.text{
+				position: absolute;
+				bottom: 20px;
+				left: 0px;
+				width: 100%;
+				padding: 0 20px;
+			}
+			h3{
+				font-size: 20px;
+				font-weight: 700;
+				text-transform: uppercase;
+				line-height: 25px;
+				margin-bottom: 5px;color: #333;
+				strong{
+					color: $brand-primary;
+				}
+			}
+		}
+	}
+
+}
+@include maxtable{
+	.banner-center{
+		.col-md-3,.col-md-6{
+			padding: 0px !important;
+		}
+	}
+	.shipping-container .col-md-4{
+		padding: 0px !important;
+	}
+	.banner-center{
+		.col-md-6{
+			margin: 40px 0px;
+		}
+	}
+	.banner-center{
+		margin-bottom: 30px;
+	}
+	.shipping-container{
+		.col-md-4{
+			&:nth-child(2){
+				margin: 20px 0px;
+			}
+		}
+	}
+}
+@include maxmobile{
+	.banner-center{
+		.col-md-6{
+			.banner-item{
+				height: 615px;
+			}
+			.text{
+				position: relative;
+				left: 0;
+				top: 20px;
+				width: 100%;
+			}
+			.images{
+				position: relative;
+				left: -15px;
+			}
+		} 
+	} 
+}

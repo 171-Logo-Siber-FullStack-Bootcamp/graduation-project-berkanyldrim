@@ -1,6 +1,8 @@
 const { request } = require("express");
 const pool = require("../config/db");
 const elasticClient = require('../elasticSearch/elasticClient');
+
+
 //veritabanında fıeld alanlarını aldık Product amacımız tamamen o verileri rahatca kullanabılmemız
 getProducts = async (req, res) => {
     await pool.query('SELECT * FROM products ', (error, results) => {

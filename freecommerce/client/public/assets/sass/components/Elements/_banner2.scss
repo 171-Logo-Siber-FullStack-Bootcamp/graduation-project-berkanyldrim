@@ -1,0 +1,27 @@
+.banner-bottom{
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 50px;
+	a{
+		display: inline-block;
+		width: 20%;
+		float: left;
+	}
+	img{
+		width: 100%;
+		height: auto;
+	}
+}
+@include maxtable{
+	.banner-bottom{
+		a{
+			width: 33.33%;
+			&:first-child,&:nth-child(2){
+				width: 50%;
+			}
+		}
+	}
+	.shipping-container{
+		margin: 50px 0;
+	}
+}

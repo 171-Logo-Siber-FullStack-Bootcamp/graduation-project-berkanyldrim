@@ -1,0 +1,283 @@
+/** 6.5.1. General **/
+#footer {
+	margin-top: 30px;display: inline-block;width: 100%;
+	background: url("../images/Futurelife-bg-body.png") repeat;
+	padding-top: 70px;
+	h3{
+		font-size: 18px;font-weight: 700;color: #555555;text-transform: uppercase;margin-bottom: 20px;line-height: 24px;
+	}
+	&.border-top{
+		border-top:1px solid #f2f2f2;
+	}
+	.footer-top{
+		.col-md-6{
+			p{
+				max-width: 400px;
+				margin-bottom: 20px;
+				line-height: 24px;
+			}
+			.infomation{
+				p{
+					margin-bottom: 0px;
+				}
+			}
+		}
+		p{
+			font-family: "Lora";
+			color: #aaa;
+			font-style: italic;
+			line-height: 24px;
+		}
+		.infomation{
+			p{
+				color: #888;
+			}
+			i{
+				font-size: 13px;
+				color: #888;
+				line-height: 24px;
+				margin-right: 8px;
+			}
+		}
+		.col-md-4{
+			ul{
+				width: 50%;
+				display: inline-block;
+				float: left;
+			}
+		}
+		ul li a{
+			font-family: "Lora" !important;
+			font-size: 14px;
+			color: #aaa;
+			line-height: 30px;
+			font-style: italic;
+			transition:all 0.5s ease-out 0s;
+			&:hover{
+				color: $brand-primary;padding-left: 15px;
+			}
+		}
+	}
+	.footer-bottom{
+		.col-md-6{
+			padding: 0px;
+		}
+		padding: 30px 0px;border-top: 1px solid #f0f2f2;margin-top: 70px;
+		a{
+			&:hover i{
+				color: #aaa;
+				font-size: 20px;
+				margin-right: 25px;
+			}
+			i{
+				color: #aaa;
+				font-size: 20px;
+				margin-right: 25px;
+			}
+		}
+		p,p a{
+			font-family: "Lora";font-style: italic;font-size: 14px;line-height: 20px;color: #aaa;
+		}
+		p{
+			float: right;
+			padding-right:0px;
+		}
+	}
+}
+/** 6.5.2. Footer Version 1 **/
+#footer {
+	&.footer-v2 {
+		margin-top: 0px;
+		background: url(../images/Futurelife-bg-newsletter-v2.png) repeat;
+		.footer-bottom{
+			border-top: 1px solid #efe6ef;
+		}
+	}
+}
+/** 6.5.3. Footer Version 2 **/
+#footer {
+	&.footer-v2 {
+
+	}
+}
+/** 6.5.3. Footer Version 3 **/
+#footer {
+	&.footer-v3 {
+		margin-top: 0px;
+		background: none;
+		padding-top:0px;
+		.footer-bottom{
+			margin-top: 0px;
+			.col-md-6{
+				&:last-child{
+					text-align: right;
+					a{
+						color: $gray-light;
+						font-family: "Lora";
+						font-style: italic;
+						&:nth-child(1),&:nth-child(2){
+							margin-right: 15px;
+						}
+						&:hover,&.active{
+							color: $home-v3-color;
+							text-decoration: underline;
+							i{
+								color: $home-v3-color;
+							}
+						}
+					}
+				}
+			}
+			p{
+				float: inherit;
+			}
+		}
+	}
+}
+/** 6.5.3. Footer Version 4 **/
+#footer{
+	&.footer-v4{
+		background:$home-v3-color;
+		text-align: center;
+		.footer-bottom{
+			margin-top: 0px;
+			border-top: 1px solid #97dfe4;
+		}
+		a,p{
+			color: #fff !important;
+		}
+		.logo-footer{
+			font-size: 40px;
+			font-weight: 700;
+			text-transform: uppercase;
+			display: inline-block;
+		}
+		.share{
+			a{
+				font-family: "Lora";
+				font-style: italic;
+				margin-right: 10px;
+				&:nth-child(1),&:nth-child(2){
+					margin-right: 20px;
+				}
+				&:last-child{
+					margin-right: 0px;
+				}
+				&.active{
+					text-decoration: underline;
+				}
+				i{
+					font-size: 18px;
+				}
+			}
+		}
+		.footer-bottom{
+			p{
+				width: 100%;
+				text-align: center;
+			}
+		}
+	}
+}
+/** 6.5.4. Footer Version 5 **/
+#footer {
+	&.footer-v5 {
+		.footer-bottom{
+			border: none;
+			.col-md-6{
+				a{
+					&:hover,&.active{
+						color: #fff !important;
+						i{
+							color: #fff !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@include tablet {
+	#footer{
+		.footer-top{
+			.col-md-4{
+				margin: 50px 0px;
+				display: inline-block;
+				width: 100%;
+				ul.menu{
+					&:last-child{
+						text-align: right;
+						li{
+							a{
+								&:hover{
+									padding-right:15px;
+									padding-left: 0px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.footer-bottom{
+			.col-md-6{
+				text-align: center;
+				margin-bottom: 10px;
+			}
+			p{
+				float: inherit;
+			}
+		}
+	}
+	.banner-center{
+		.col-md-6,.col-md-3{
+			padding: 0px !important;
+		}
+		.col-md-6{
+			margin: 40px 0px;
+		}
+	}
+	.shipping-container{
+		.col-md-4{
+			&:nth-child(2){
+				margin: 20px 0px;
+			}
+		}
+	}
+	#footer.footer-v3 .footer-bottom .col-md-6:last-child{
+		text-align: center;
+	}
+}
+@include maxtable{
+	#footer{
+		.footer-top{
+			.col-md-4{
+				margin: 50px 0px;
+				display: inline-block;
+				width: 100%;
+				ul.menu{
+					&:last-child{
+						text-align: right;
+						li{
+							a{
+								&:hover{
+									padding-right:15px;
+									padding-left: 0px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.footer-bottom{
+			.col-md-6{
+				text-align: center;
+				margin-bottom: 10px;
+			}
+			p{
+				float: inherit;
+			}
+		}
+	}
+}

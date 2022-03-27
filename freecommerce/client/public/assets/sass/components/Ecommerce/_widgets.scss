@@ -1,0 +1,124 @@
+%style_link{
+	color: #333;
+	font-family: "Lora";
+	font-style: italic;
+	font-weight: 400;
+	text-transform: capitalize;
+	color: #666;
+	&:hover{
+		color: $brand-primary;
+	}	
+}
+.widget{
+	font-family: "Lora";
+	color: #666;
+	font-style: italic;
+	.widget-title{
+		font-family: "Montserrat";
+		font-size: 18px;
+		font-weight: 700;
+		color: #333;
+		text-transform: uppercase;
+		font-style: normal;
+		padding-bottom: 25px;
+		margin-bottom: 25px;
+		position: relative;
+		&::after{
+			position: absolute;
+			content: "";
+			bottom: 0px;
+			left: 0px;
+			width: 30px;
+			height: 3px;
+			background: $brand-primary;
+		}
+	}
+	ul.product-categories{
+		margin-bottom: 30px;
+		li{
+			border-bottom: 1px solid $gray-lighter;
+			line-height: 30px;
+			display: block;
+			position: relative;
+			margin-bottom: 15px;
+			i{
+				position: absolute;
+				right: 0;
+				top: 0;
+				padding: 9px;
+				cursor: pointer;
+				&.active::before{
+					content: "\f068";
+				}
+			}
+			a{
+				text-transform: uppercase;
+				color: #333;
+				font-family: "Montserrat";
+				font-weight: 700;
+				font-size: 13px;
+				font-style: normal;
+			}
+		}
+		ul{
+			display: none;
+			margin: 0px;
+			border-top: 1px solid $gray-lighter;
+			padding: 6px 0px;
+			li{
+				border-bottom: none;
+				margin-bottom: 0px;				
+				a{
+					@extend %style_link;
+					transition: all 0.3s ease-out 0s;
+					&:hover{
+						margin-left: 15px;
+					}
+				}
+				i{
+					display: none;
+				}
+			}
+		}
+	}
+	ul{
+		margin-bottom: 15px;
+		li{
+			position: relative;
+			line-height: 30px;
+			a{
+				@extend %style_link;
+			}
+			span{
+				position: absolute;
+				right: 0px;
+				top: 0px;
+			}
+		}
+	}
+	h4{
+		font-family: "Montserrat";
+		font-style: normal;
+		border-bottom: 1px solid $gray-lighter;
+		padding-bottom: 10px;
+		margin-bottom: 10px;
+		text-transform: uppercase;
+		font-size: 13px;
+		color: #333;
+		font-weight: 700;
+	}
+}
+.my-account{
+	margin-bottom: 50px;
+	.widget ul li{
+		margin-bottom: 20px;
+	}
+	.breadcrumb{
+		margin-bottom: 80px;
+	}
+	.contact-form{
+		.link-button{
+			float: right;
+		}
+	}
+}

@@ -1,0 +1,21 @@
+.brand-container{
+	display: inline-block;
+	width: 100%;
+	border-top:1px solid $gray-lighter;
+	ul{
+		width: 100%;
+		li{
+			display: inline-block;
+			text-align: center;
+			border-left: 1px solid $gray-lighter;
+			width: 20%;
+			float: left;
+			img{
+				max-width: 100%;
+			}
+			&:last-child{
+				border-right: 1px solid $gray-lighter;
+			}
+		}
+	}
+}

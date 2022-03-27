@@ -1,0 +1,319 @@
+/** 2.2. Default base **/
+/** 2.2.1.	Button **/
+.dropdown-menu{
+	background-color: $gray-dark;
+	border-radius: 0px;
+	box-shadow: none;
+	margin-top: 10px;
+	padding: 0px;
+	li{
+		&:last-child{
+			border-bottom: none;
+		}
+		border-bottom: 1px solid #444;		
+		a{
+			&:hover,&:active,&:focus{
+			background: $gray-dark !important;
+			color: #ddd;
+			}
+			color: $gray-light;
+			font-size: 11px;
+			line-height: 40px;
+			display: inline-block;
+			text-transform: uppercase;
+			width: 100%;
+			padding: 5px 20px;
+		}
+	}
+}
+.title-text{
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	margin: 50px 0px;
+	position: relative;
+	&:before{
+		position: absolute;
+		content: "";
+		left: 0px;
+		width: 100%;
+		border-top: 1px solid #eee;
+		top: 23%;
+	}
+	h3{
+		font-size: 36px;
+		color: $gray-dark;
+		font-weight: 700;
+		text-transform: uppercase;
+		line-height: 30px;
+		display: inline-block;
+		padding: 0 20px;
+		background: #fff;
+		position: relative;
+	}
+	p{
+		font-size: 14px;
+		color: $gray-light;
+		line-height: 25px;
+		font-family: "Lora";
+		font-style: italic;
+		margin-top: 10px;
+	}
+	&.title-text-v2{
+		text-align: left;
+		margin: 30px 0px;
+		&:before{
+			position: static;
+		}
+		h3{
+			font-size: 24px;
+			padding: 0;			
+		}
+		&.title-text-v3{
+			position: relative;
+			h3{
+				font-size: 36px;
+				color: $gray;
+				position: relative;
+				&:after{
+					position: absolute;
+					content:"";
+					top: -50px;
+					background: $home-v3-color;
+					height: 5px;
+					width: 30px;
+					left: 0px;
+				}
+			}
+			p{
+				font-family: "Lora";
+				font-style: italic;
+				color: $gray-light;
+				width: 100%;
+				margin-top: 30px;
+			}
+			ul.tabs{
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				li{
+					font-family: "Lora";
+					font-style: italic;
+					font-weight: 700;
+					font-size: 18px;
+					text-transform: capitalize;
+					color: $gray-light;
+					&.active,&:hover{
+						color: $home-v3-color;
+						border-bottom: 1px solid $home-v3-color;
+					}
+				}
+			}
+		}
+	}
+	&.title-about{
+		margin-top: 0px;
+		h3{
+			background:none;
+		}
+		&:before{
+			position: static;
+		}
+	}
+}
+
+.breadcrumb{
+	background: #fff;
+	margin: 20px 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	li{
+		font-family: "Lora";
+		font-style: italic;
+		&.active{
+			color: $brand-primary;
+		}
+		a{
+			color: $gray;
+		}
+	}
+}
+.return-home{
+	a:first-child{
+		margin-right: 20px;
+	}
+}
+.banner-grid{
+	padding: 0px;
+	img{
+		width: 100%;
+	}
+}
+.bg-white{
+	background-color: #fff;
+}
+.padding-right-0{
+	padding-right: 0px !important;
+}
+.padding-left-0{
+	padding-left: 0px !important;
+}
+.padding-left-20{
+	padding-left: 20px !important;
+}
+.link-button{
+	background: #ddd;color: #555;
+	font-weight: 700;
+	font-size: 13px;
+	border: none;
+	box-shadow: none;
+	text-transform: uppercase;
+	border-radius: 10px;
+	font-family: "Montserrat";
+	font-style: normal;
+	border-radius:5px;
+	padding: 0px 20px;
+	line-height:40px;
+	&:hover{
+		background: $brand-primary;
+		color: #fff;
+	}
+	&.link-button-v2{
+		background: $gray-dark;
+		color: #fff;
+		&:hover{
+			background: $brand-primary;
+		}
+	}
+	&.link-button-fb{
+		background: #2c5990;
+		color: #fff;
+		font-size: 13px;
+		i.fa{
+			font-size: 17px;
+			line-height: 20px;
+			margin-right: 10px;
+			vertical-align: middle;
+		}
+	}
+	&.link-button-tw{
+		background: #16bce6;
+		color: #fff;
+		i.fa{
+			font-size: 17px;
+			vertical-align: middle;
+			margin-right: 10px;
+			line-height: 20px;
+		}
+	}
+}
+.acc-login{
+	.form-group{
+		.btn{
+			&:nth-child(2n+1){
+				width: 48%;
+				margin-right: 2%;
+				float: left;
+				padding: 5px;
+			}
+			&:nth-child(2n){
+				margin-left: 2%;
+				width: 48%;
+				float: left;
+				padding:5px;
+			}
+		}
+	}
+}
+.home-v4{
+	.animate1{
+		&:hover{
+			animation-name:tada;
+		}
+	}
+}
+.color-red{
+	color: #ff1313;
+} 
+
+/*Padding Around the Block*/
+.space-padding-0{
+	padding: 0 !important;
+}
+.space-padding-10 {
+	padding: 10px !important;
+}
+.space-padding-20 {
+	padding: 20px !important;
+}
+.space-padding-30 {
+	padding: 30px !important;
+}
+.space-padding-40 {
+	padding: 40px !important;
+}
+.space-padding-50 {
+	padding: 50px !important;
+}
+/*Padding Top & Bottom*/
+.space-padding-tb-10 {
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
+}
+.space-padding-tb-20 {
+	padding-top: 20px !important;
+	padding-bottom: 20px !important;
+}
+.space-padding-tb-30 {
+	padding-top: 30px !important;
+	padding-bottom: 30px !important;
+}
+.space-padding-tb-40 {
+	padding-top: 40px !important;
+	padding-bottom: 40px !important;
+}
+.space-padding-tb-50 {
+	padding-top: 50px !important;
+	padding-bottom: 50px !important;
+}
+.space-padding-tb-60{
+	padding-top: 60px !important;
+	padding-bottom: 60px !important;
+}
+.space-padding-tb-70{
+	padding-top: 70px !important;
+	padding-bottom: 70px !important;
+}
+.space-padding-tb-80{
+	padding-top: 80px !important;
+	padding-bottom: 80px !important;
+}
+
+.space-padding-tb-100{
+	padding-top: 100px !important;
+	padding-bottom: 100px !important;
+}
+.margin-0{margin: 0px !important;}
+/*Margin Bottom*/
+.space-5  {margin-bottom: 5px !important;}
+.space-10 {margin-bottom: 10px !important;} 
+.space-15 {margin-bottom: 15px !important;}
+.space-20 {margin-bottom: 20px !important;}
+.space-25 {margin-bottom: 25px !important;}
+.space-30 {margin-bottom: 30px !important;}
+.space-35 {margin-bottom: 35px !important;}
+.space-40 {margin-bottom: 40px !important;}
+.space-45 {margin-bottom: 45px !important;}
+.space-50 {margin-bottom: 50px !important;}
+.space-55 {margin-bottom: 55px !important;}
+.space-60 {margin-bottom: 60px !important;}
+.space-65 {margin-bottom: 65px !important;}
+.space-70 {margin-bottom: 70px !important;}
+.space-75 {margin-bottom: 75px !important;}
+.space-80 {margin-bottom: 80px !important;}
+.space-85 {margin-bottom: 85px !important;}
+.space-90 {margin-bottom: 90px !important;}
+.space-95 {margin-bottom: 95px !important;}
+.space-100 {margin-bottom: 100px !important;}
+/*Margin top*/
+.space-margin-top-0  {margin-top: 0px !important;}

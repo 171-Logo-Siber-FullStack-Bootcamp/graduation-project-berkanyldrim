@@ -1,0 +1,71 @@
+.ordering{
+	font-family: "Lora";
+	font-size: 13px;
+	color: #333;
+	font-style: italic;
+	display: inline-block;
+	width: 100%;
+	margin: 30px 0px 10px;
+	a{
+		display: inline-block;
+		height: 35px;
+		line-height: 35px;
+		color: #333;
+		padding: 0 15px;
+		background: #eee;
+		vertical-align: bottom;
+	}
+	span{
+		display: inline-block;
+		height: 35px;
+		width: 35px;
+  		background: #eee url(../images/Futurelife-icon-list-col.png)no-repeat scroll center 8px;
+  		vertical-align: bottom;
+  		cursor: pointer;
+  		&.active{
+  			background-color: #333;
+  			background-image: url(../images/Futurelife-icon-list-col-active.png) !important;
+  		}
+  		&.list{
+  			background-position: center bottom 11px !important; 
+  		}
+  		&:hover{
+  			@extend .active;
+  		}
+	}
+	.order-by{
+		display: inline-block;
+		margin-left: 20px;
+		position: relative;
+		&::after{
+			position: absolute;
+			content: "\f107";
+			top: 9px;
+			right: 10px;
+			font-family: FontAwesome;
+			line-height: 1;
+			font-size: 16px;
+			font-style: normal;
+		}
+	}
+	form{
+		vertical-align: bottom;
+		select{
+			appearance: none;
+			border: none;
+			box-shadow: none;
+			padding:9px 25px 9px 15px;
+			background: #eee;
+			outline: none;
+		}
+	}
+}
+p.result-count{
+	float: right;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #b2b2b2;
+	margin-top: 7px;
+	font-family:"Lora";
+	font-style: italic;
+	font-size: 13px;
+}

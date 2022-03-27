@@ -1,0 +1,281 @@
+.product-details-content{
+	.col-md-6{
+		&:last-child{
+			padding-right: 0px;
+			font-family: "Lora";
+			font-style: italic;
+			display: inline-block;
+		}
+	}
+	.product-name{
+		h1{
+			color: $gray;
+			font-size: 16px;
+			margin-bottom: 10px;
+			line-height: 20px;
+		}
+		p{
+			color: $gray-light;
+			line-height: 20px;
+		}
+	}
+	.rating{
+		.icon-rating{
+			label{
+				margin: 4px 0 0 0 !important;
+			}
+		} 
+		i{
+			font-size: 13px;
+		}
+		ul{
+			margin-left: 20px;
+			vertical-align: bottom;
+			display: inline-block;
+			li{
+				display: inline-block;
+				color: $gray-light;
+				&:first-child{
+					padding-right:10px;
+					margin-right: 10px;
+					border-right: 1px solid $gray-light;
+				}
+				a{
+					color: $gray-light;
+				}
+			}
+		}
+	}
+	.wrap-price{
+		border-bottom: 1px solid $gray-lighter;
+		p{
+			font-family: "Montserrat";
+			font-style: normal;
+			font-weight: 700;
+			color: $gray;
+			font-size: 20px;
+		}
+	}
+	.title-product{
+		text-transform: capitalize;
+		font-family: "Montserrat";
+		font-style: normal;
+		font-weight: 700;
+	}
+	.form-group{
+		position: relative;
+		display: inline-block;
+		width: 100%;
+		&::after{
+	   		position: absolute;
+	   		top: 50px;
+	   		right: 10px;
+	   		font-family: "FontAwesome";
+	   		content: "";
+	   		font-size: 15px;
+	   		color: #555;
+	   		line-height: 1;
+	   		width: 10px;
+	   		height: 10px;
+	   		font-style: normal;
+	   		color: $gray;
+	   }
+	}
+	label.control-label{
+		font-size: 14px !important;
+	}
+	.form-control{
+		appearance: none;
+	   -moz-appearance: none;
+	   -ms-appearance: none;
+	   -o-appearance: none;
+	   -webkit-appearance: none;
+	   height: 38px;	   
+	   option{
+	   		padding: 10px 0;
+	   }
+	}
+	.products{
+		.product{
+			.action{
+				a{
+					opacity: 100;
+				}
+			}
+			.add-to-cart{
+				&:hover{
+					background: $brand-primary;
+					border: 1px solid $brand-primary;
+					color: #fff;
+				}
+			}
+		}
+	}
+	.quantity{
+		p{
+			margin-bottom: 10px;
+		}
+		input{
+			height: 38px;
+		}
+	}
+}
+
+
+%title{
+	font-size: 18px;
+	color: $gray;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	position: relative;
+	text-transform: uppercase;
+	font-weight: 700;
+	&::after{
+		content: "";
+		background: $brand-primary;
+		bottom:0;
+		left: 0;
+		width: 30px;
+		height: 3px;
+		position: absolute;
+	}
+}
+.title-product{
+	h3{
+		@extend %title;
+		margin-bottom: 10px;
+	}
+}
+.upsell-product{
+	&.products{
+		margin: 0px -10px;
+	}
+}
+.hoz-tab-container{
+	display:inline-block;
+	width: 100%;
+	margin-bottom: 50px;
+	ul{
+		li{
+			@extend %title;
+			display: inline-block;
+			cursor: pointer;
+			margin-right: 30px;
+			&:hover,&.active{
+				color: $brand-primary;
+			}
+			&:last-child{
+				margin-right: 0px;
+			}
+			&.active{
+				&::after{
+					position: absolute;
+				}
+			}
+			&::after{
+				position: static;
+			}
+		}
+	}
+	.tab-container{		
+		p{
+			font-family: "Lora";
+			font-style: italic;
+			display: inline-block;
+			width: 100%;
+			margin: 3px 0px;
+			font-size: 13px;
+		}		
+		#description{
+			p{
+				font-family: "texgyreadventorregular";
+				font-weight: 400;
+				line-height: 24px;
+				font-style: normal;
+			}
+		}	
+		#customer{
+			.col-md-6{
+				&:first-child{
+					padding-left: 0px;
+				}
+			}
+			.icon-rating{
+				p{
+					display: inline-block;
+					width: auto;
+					margin-right: 10px;
+				}
+				i{
+					font-size: 13px;
+				}
+			}
+			label{
+				margin: 5px 0 0 !important
+			}
+			.form-horizontal{
+				font-family: "Lora";
+				font-style: italic;
+				font-size: 13px;
+				label{
+					color: $gray-dark;
+					margin-bottom: 10px!important;
+					font-size: 13px;
+					display: inline-block;
+					widows: 100%;
+				}
+			}
+			input[type=radio]{
+				display: none;
+			}
+			.customer-radio{
+				label{
+					display: inline-block;
+					position: relative;
+					padding-left:20px;
+					margin-right: 20px !important;
+					font-family: "Lora" ;
+					font-style: italic;
+					font-size: 13px;
+					color: $gray-light;
+					text-transform: uppercase;
+					&:before{
+						position: absolute;
+						content: "";
+						left: 0px;
+						top:2px;
+						background:#fff;
+						border:1px solid $brand-primary;
+						@include size(12px,12px);
+					}
+				}
+				input[type=radio]:checked + label:before{
+					background: $brand-primary;
+				}
+			}
+		}
+		h3{
+			font-family: "Montserrat";
+			font-style: normal;
+			font-weight: 700;
+			text-transform: capitalize;
+			font-size: 18px;
+			color: $gray-dark;
+		}
+		h4{
+			font-family: "Lora";
+			font-style: italic;
+			color: $gray-dark;
+			font-size: 13px;
+			font-weight: 700;
+			margin-bottom: 10px;
+		}
+	}
+}
+@include maxtable{
+	.product-details-content{
+		.col-md-6{
+			padding: 0px !important;
+		}
+	}
+}
