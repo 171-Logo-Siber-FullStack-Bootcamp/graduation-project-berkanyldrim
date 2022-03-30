@@ -20,14 +20,14 @@
                 <div class="tab-container space-30">
                     <div id="tables" class="tab-content">
                         <div class="product-tab-content products">
-                            <div class="item-inner">
+                            <div class="item-inner" v-for="product of products " :key="product.id">
                                 <div class="product">
                                     <a class="product-images" href="#" title="">
-                                        <img class="primary_image" src="assets/images/products/1.jpg" alt=""/>
-                                        <img class="secondary_image" src="assets/images/products/1.jpg" alt=""/>
+                                        <img class="primary_image" :src="'http://localhost:3000'+product.image" alt=""/>
+                                        <img class="secondary_image" :src="'http://localhost:3000'+product.image" alt=""/>
                                     </a>
-                                    <p class="product-title">Smart TV Ultra HD 40 inch - 40JU6600</p>
-                                    <p class="product-price">$ 650.99</p>
+                                    <p class="product-title">{{ product.name }}</p>
+                                    <p class="product-price">{{ product.price }}</p>
                                     <a class="add-to-cart" href="#">Add to Cart</a>
                                     <div class="action">
                                         <a href="#" title="Like"><i class="fa fa-heart-o"></i></a>
@@ -35,63 +35,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item-inner">
-                                <div class="product">
-                                    <a class="product-images" href="#" title="">
-                                        <img class="primary_image" src="assets/images/products/1.jpg" alt=""/>
-                                        <img class="secondary_image" src="assets/images/products/1.jpg" alt=""/>
-                                    </a>
-                                    <p class="product-title">Smart TV Ultra HD 40 inch - 40JU6600</p>
-                                    <p class="product-price">$ 650.99</p>
-                                    <a class="add-to-cart" href="#">Add to Cart</a>
-                                    <div class="action">
-                                        <a href="#" title="Like"><i class="fa fa-heart-o"></i></a>
-                                        <a href="#" title="View"><i class="fa fa-compress"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item-inner">
-                                <div class="product sale">
-                                    <span class="sale lable">Sale</span>
-                                    <a class="product-images" href="#" title="">
-                                        <img class="primary_image" src="assets/images/products/1.jpg" alt=""/>
-                                        <img class="secondary_image" src="assets/images/products/1.jpg" alt=""/>
-                                    </a>
-                                    <p class="product-title">Smart TV Ultra HD 40 inch - 40JU6600</p>
-                                    <div class="product-price">
-                                        <span class="price">$ 650.99</span>
-                                        <span class="price-old">$ 670.99</span>
-                                        <p class="content-star">
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star"></i>
-                                        </p>
-                                    </div>
-                                    <a class="add-to-cart" href="#">Add to Cart</a>
-                                    <div class="action">
-                                        <a href="#" title="Like"><i class="fa fa-heart-o"></i></a>
-                                        <a href="#" title="View"><i class="fa fa-compress"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item-inner">
-                                <div class="product ">
-                                    <span class="new lable">New</span>
-                                    <a class="product-images" href="#" title="">
-                                        <img class="primary_image" src="assets/images/products/1.jpg" alt=""/>
-                                        <img class="secondary_image" src="assets/images/products/1.jpg" alt=""/>
-                                    </a>
-                                    <p class="product-title">Smart TV Ultra HD 40 inch - 40JU6600</p>
-                                    <p class="product-price">$ 650.99</p>
-                                    <a class="add-to-cart" href="#">Add to Cart</a>
-                                    <div class="action">
-                                        <a href="#" title="Like"><i class="fa fa-heart-o"></i></a>
-                                        <a href="#" title="View"><i class="fa fa-compress"></i></a>
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
                         <!-- End product-tab-content products                                     -->
                     </div>
@@ -369,8 +313,27 @@
 </template>
 
 <script>
-export default {
-    name:"MainContent"
-}
-
+  import axios from "axios";
+  export default {
+    name:"MainContent",
+    created() {
+      this.getProducts();
+    },
+    data() {
+      return {
+        products: [],
+        errors: []
+      };
+    },
+    methods: {
+      getProducts() {
+        axios
+          .get("http://localhost:3000/api/getallproduct")
+          .then(response => (this.products = response.data))
+          .catch(error => {
+            this.errors.push(error);
+          });
+      }
+    }
+  };
 </script>

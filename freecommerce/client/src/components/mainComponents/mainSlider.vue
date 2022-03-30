@@ -36,7 +36,9 @@
 </template>
 
 <script>
-export default {
-    name:"MainSlider"
-}
+  export default {
+    name:"MainSlider",
+    
+    
+  };
 </script>

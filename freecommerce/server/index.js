@@ -1,8 +1,10 @@
 const express=require("express");
-const multer  = require('multer')
+const cors = require("cors");
 const app = express()
+app.use(cors())
 const bodyParser = require("body-parser")
 app.use(bodyParser.json())
+app.use(express.static("public")) //statik dosyların nerede olacağını belirtiyor.
 const port = 3000
 
 const winston = require('winston');

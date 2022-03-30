@@ -13,8 +13,10 @@ getProducts = async (req, res) => {
     })
 }
 postProducts = async (request, response) => {
-    const {  name,description,stock,price } = request.body
-    await pool.query("INSERT INTO products (name,description,stock,price) VALUES($1,$2,$3,$4)", [ name,description,stock,price], (error, results) => {
+    let image = request.file; // imageyi yakaladık
+    let fullImagePath = "/images/"+image.filename;
+    const {  name,description,stock,price,category_id } = request.body;
+    await pool.query("INSERT INTO products (name,description,stock,price,category_id,image) VALUES($1,$2,$3,$4,$5,$6)", [ name,description,stock,price,category_id,fullImagePath], (error, results) => {
         if (error) {
             throw error
         }
@@ -27,8 +29,8 @@ postProducts = async (request, response) => {
 
 updateProducts = async (request,response)=>{
     const id = parseInt(request.params.id)
-    const {  name,description,stock,price } = request.body
-    await pool.query('UPDATE products SET name = $1, description = $2, stock = $3, price=$4  WHERE id = $5', [name,description,stock,price,id], (error,results)=>{
+    const {  name,description,stock,price,category_id } = request.body
+    await pool.query('UPDATE products SET name = $1, description = $2, stock = $3, price=$4,category_id=$5  WHERE id = $6', [name,description,stock,price,category_id,id], (error,results)=>{
         if(error){
             throw error
         }
